@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Storybook – Book Recommender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+        .story {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 8px;
+        }
+        .book-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 6px;
+            background: #fcfcfc;
+            margin-bottom: 10px;
+        }
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .book-author {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<h1>📘 Storybook – Компоненти</h1>
+
+<!-- Story 1: BookCard -->
+<div class="story">
+    <h2>Компонент: BookCard</h2>
+    <p>Використовується для відображення однієї книги.</p>
+
+    <h3>Варіант 1 – Стандартна картка</h3>
+    <div class="book-card">
+        <div class="book-title">Гаррі Поттер</div>
+        <div class="book-author">Дж.К. Роулінг</div>
+        <div class="book-genre">Жанр: fantasy</div>
+        <div class="book-rating">Рейтинг: 4.9</div>
+    </div>
+
+    <h3>Варіант 2 – Без рейтингу</h3>
+    <div class="book-card">
+        <div class="book-title">Світ Софії</div>
+        <div class="book-author">Юстейн Ґордер</div>
+        <div class="book-genre">Жанр: philosophy</div>
+    </div>
+</div>
+
+<!-- Story 2: BookList -->
+<div class="story">
+    <h2>Компонент: BookList</h2>
+    <p>Використовується для показу кількох BookCard'ів одночасно.</p>
+
+    <h3>Варіант 1 – 2 книги</h3>
+    <div class="book-card">
+        <div class="book-title">Дюна</div>
+        <div class="book-author">Френк Герберт</div>
+        <div class="book-genre">Жанр: sci-fi</div>
+        <div class="book-rating">Рейтинг: 4.8</div>
+    </div>
+    <div class="book-card">
+        <div class="book-title">1984</div>
+        <div class="book-author">Джордж Орвелл</div>
+        <div class="book-genre">Жанр: dystopian</div>
+        <div class="book-rating">Рейтинг: 4.7</div>
+    </div>
+
+    <h3>Варіант 2 – Порожній список</h3>
+    <p><em>Книги не знайдено.</em></p>
+</div>
+</body>
+</html>

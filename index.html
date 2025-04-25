@@ -42,5 +42,29 @@
 <div id="bookList" style="margin-top: 20px;"></div>
 
 <script src="fetchBooks.js"></script>
+<!-- Cookie Consent -->
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script>
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+            palette: {
+                popup: {
+                    background: "#000",
+                },
+                button: {
+                    background: "#f1d600",
+                },
+            },
+            content: {
+                message: "Цей сайт використовує cookies для покращення взаємодії з користувачем.",
+                dismiss: "Зрозуміло",
+                link: "Детальніше",
+                href: "privacy_policy.md", // посилання на політику конфіденційності
+            },
+        });
+    });
+</script>
+
 </body>
 </html>

@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: Book Recommender API
+  description: API для отримання рекомендованих книг за жанром та деталями
+  version: 1.0.0
+
+servers:
+  - url: http://localhost
+
+paths:
+  /books.php:
+    get:
+      summary: Отримати книги за жанром
+      parameters:
+        - name: genre
+          in: query
+          required: true
+          description: Назва жанру (наприклад "fantasy", "sci-fi")
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Список книг
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+
+  /book.php:
+    get:
+      summary: Отримати детальну інформацію про книгу за ID
+      parameters:
+        - name: id
+          in: query
+          required: true
+          description: Унікальний ідентифікатор книги
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Деталі книги
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+
+components:
+  schemas:
+    Book:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        author:
+          type: string
+        genre:
+          type: string
+        rating:
+          type: number
+        description:
+          type: string
