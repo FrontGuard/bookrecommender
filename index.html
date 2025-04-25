@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рекомендації книг</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label, select, button {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .book {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<h1>📚 Рекомендовані книги</h1>
+
+<label for="genre">Оберіть жанр:</label>
+<select id="genre" onchange="fetchBooks()">
+    <option value="fantasy">Фентезі</option>
+    <option value="sci-fi">Наукова фантастика</option>
+    <option value="dystopian">Антиутопія</option>
+    <option value="romance">Романтика</option>
+    <option value="philosophy">Філософія</option>
+</select>
+
+<div id="bookList" style="margin-top: 20px;"></div>
+
+<script src="fetchBooks.js"></script>
+</body>
+</html>
